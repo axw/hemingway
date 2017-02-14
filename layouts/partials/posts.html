@@ -8,7 +8,7 @@
       </div>
       <h2 class="subtitle is-6">
       Posted {{ .Date.Format "January 2, 2006" }}.
-      {{ if .Params.tags }}Tags: {{ range $i, $tag := .Params.tags }} {{ if gt $i 0 }}, {{ end }} <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">{{ . }}</a>{{ end }}.{{ end }}
+      {{ if .Params.tags }}Tags: {{ range $i, $tag := .Params.tags }}{{ if gt $i 0 }}, {{ end }}<a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">{{ . }}</a>{{ end }}.{{ end }}
       </h2>
     </article>
     {{ end }}
